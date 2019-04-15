@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SiteMedico.Models.Especialidades>
+
+@{
+    ViewBag.Title = "Cadê Meu Médico ? - Lista de Especialidades";
+}
+<style>
+    body {
+        font-family: Elephant !important;
+    }
+
+    h2 {
+        color: #262262;
+    }
+</style>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Adicionar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Especialidade)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Especialidade)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Editar", new { id = item.EspecialidadeId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.EspecialidadeId }) |
+                @Html.ActionLink("Delete", "Excluir", new { id = item.EspecialidadeId })
+            </td>
+        </tr>
+    }
+
+</table>

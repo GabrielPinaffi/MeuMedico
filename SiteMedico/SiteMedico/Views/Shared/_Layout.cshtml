@@ -1,0 +1,103 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="~/img/icon.png">
+    <title>@ViewBag.Title</title>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/JavaScript.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+
+    <style>
+
+        #anco {
+            color: black !important;
+            float: left;
+            height: 50px;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        a#anco:hover {
+            color: white !important;
+            text-decoration: none;
+        }
+
+        #deslog {
+            color: black !important;
+            float: left;
+            height: 50px;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+
+            #deslog:hover {
+                color: red !important;
+                background-color: #669eb7;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+    </style>
+</head>
+
+<body>
+    <div style="background-color:#669eb7 " class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header hov" style="color:black;">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <b><a id="anco" class="navbar-brand" style="color:black; padding:4px;" href="/Home/Index"><img src="~/img/icon.png" width="45px" />Cadê Meu Médico?</a></b>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a id="anco" href="/Home/Index">Início</a></li>
+                    <li class="dropdown">
+                        <a id="ancor" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">
+                            Cadastros
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </a>
+                        <ul class="dropdown-menu" style="background-color:transparent; border-radius:5%; box-shadow:10px 10px 5px grey;">
+                            <li><b><a id="anco" href="/Especialidade/Adicionar">Especialidades</a></b></li>
+                            <li><b><a id="anco" href="/Medicos/Adicionar">Médico</a></b></li>
+                            <li><b><a id="anco" href="/Usuarios/Adicionar">Usuário</a></b></li>
+                            <hr style="width:100%; border-bottom:1px solid !important; border-top:0px; margin-bottom:-15px;" />
+                            <li><b><a id="anco" href="/Cidade/Adicionar">Cidade</a></b></li>
+                            <li><b><a id="anco" href="/Estados/Adicionar">Estados</a></b></li>
+                            <li><b><a id="anco" href="/Paises/Adicionar">País</a></b></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="ancora"></a></li>
+
+                        <li><a id="deslog" href="/Login/Login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="border-top:#262262 1px solid !important;">
+        @RenderBody()
+        <hr style="border-top: #262262 1px solid !important;" />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Cade meu Médico?!</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

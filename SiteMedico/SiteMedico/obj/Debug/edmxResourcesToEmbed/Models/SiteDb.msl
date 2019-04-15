@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SiteMedicoDBModelStoreContainer" CdmEntityContainer="SiteMedicoDBEntities">
+    <EntitySetMapping Name="Cidades">
+      <EntityTypeMapping TypeName="SiteMedicoDBModel.Cidades">
+        <MappingFragment StoreEntitySet="Cidades">
+          <ScalarProperty Name="CidadeId" ColumnName="CidadeId" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Especialidades">
+      <EntityTypeMapping TypeName="SiteMedicoDBModel.Especialidades">
+        <MappingFragment StoreEntitySet="Especialidades">
+          <ScalarProperty Name="EspecialidadeId" ColumnName="EspecialidadeId" />
+          <ScalarProperty Name="Especialidade" ColumnName="Especialidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estados">
+      <EntityTypeMapping TypeName="SiteMedicoDBModel.Estados">
+        <MappingFragment StoreEntitySet="Estados">
+          <ScalarProperty Name="EstadoId" ColumnName="EstadoId" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medicos">
+      <EntityTypeMapping TypeName="SiteMedicoDBModel.Medicos">
+        <MappingFragment StoreEntitySet="Medicos">
+          <ScalarProperty Name="MedicoId" ColumnName="MedicoId" />
+          <ScalarProperty Name="CRM" ColumnName="CRM" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="CidadeId" ColumnName="CidadeId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EspecialidadeId" ColumnName="EspecialidadeId" />
+          <ScalarProperty Name="AtendePorConvenio" ColumnName="AtendePorConvenio" />
+          <ScalarProperty Name="TemClinica" ColumnName="TemClinica" />
+          <ScalarProperty Name="WebsiteBlog" ColumnName="WebsiteBlog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paises">
+      <EntityTypeMapping TypeName="SiteMedicoDBModel.Paises">
+        <MappingFragment StoreEntitySet="Paises">
+          <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="SiteMedicoDBModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

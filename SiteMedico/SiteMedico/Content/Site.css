@@ -1,0 +1,89 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: Elephant !important;
+}
+
+body h2 {
+    color: #262262 !important;
+    font-family: Elephant !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#bt {
+    border-color: #337ab7;
+}
+
+#bt:hover {
+    border-color: #2e6da4;
+    background-color: #337ab7;
+    color: white;
+}
+
+#anco {
+    color: black !important;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight:bold;
+}
+
+a#anco:hover {
+    color: white !important;
+    text-decoration: none;
+    background-color: #669eb7 !important;
+}
+
+#ancor {
+    color: black !important;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+a#ancor:hover {
+    color: white !important;
+    background-color: #669eb7;
+    text-decoration: none;
+}
+
+a#ancor::selection {
+    background-color: #669eb7 !important;
+    color: white !important;
+}
+
+.dropdown-menu {
+    background-color: #669eb7 !important;
+}
+
+.navbar-inverse .navbar-nav > .open > a {
+    color: #ffffff;
+    background-color: #669eb7;
+}
+
+#ancora {
+    color: black !important;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+}

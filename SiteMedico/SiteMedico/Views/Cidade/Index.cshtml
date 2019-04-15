@@ -1,0 +1,49 @@
+﻿@model IEnumerable<SiteMedico.Models.Cidades>
+
+
+@{
+    ViewBag.Title = "Cadê Meu Médico ? - Lista de Cidades";
+}
+<style>
+    body {
+        font-family: Elephant !important;
+    }
+
+    h2 {
+        color: #262262;
+    }
+</style>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Adicionar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estados.Estado)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estados.Estado)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Editar", new { id = item.CidadeId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CidadeId }) |
+                @Html.ActionLink("Delete", "Excluir", new { id = item.CidadeId })
+            </td>
+        </tr>
+    }
+
+</table>
